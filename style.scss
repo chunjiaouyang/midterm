@@ -1,0 +1,26 @@
+/* sass --watch style.scss:style.min.css --style compressed */
+
+@import 'variables';
+@import 'functions';
+
+@import 'reset';
+@import 'classes';
+
+@import 'theme';
+
+
+@include makeGrid();
+@include makeColumns();
+
+
+@each $break-i, $break-v in $breakpoints {
+	@media (min-width:$break-v) {
+		@include makeRow(#{$break-i});
+		@include makeGap(#{$break-i});
+		@include makeColumns(#{$break-i});
+		@include makeUtilities(#{$break-i});
+		@include makeFlex(#{$break-i});
+	}
+}
+
+

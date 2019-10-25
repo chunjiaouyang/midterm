@@ -1,0 +1,96 @@
+
+
+
+$font-type:Helvetica;
+$color-main:#d1f5ef;
+$color-main-dark:darken($color-main,30%);
+$color-body-text:#112;
+
+$breakpoints: (
+	xs:0,
+	sm:375px,
+	md:800px,
+	lg:1000px,
+	xl:1200px,
+);
+
+// $columns:12;
+$header-height:3rem;
+
+$columns-map: (
+  12:12,
+  10:10
+);
+
+$sizes-map: (
+  // xxl:150px,
+  xl:3rem,
+  l:1.5rem,
+  m:1rem,
+  s:0.5rem,
+  n:0,
+);
+
+$positions-map: (
+  t:top,
+  r:right,
+  b:bottom,
+  l:left
+);
+
+$boxes-map: (
+  p:padding,
+  m:margin
+);
+
+
+$display-map:(
+  b:block,
+  i:inline,
+  ib:inline-block,
+  f:flex,
+  fi:inline-flex,
+  n:none
+);
+
+$alignment-vert-map: (
+  t:top,
+  m:middle,
+  b:bottom,
+  bl:baseline,
+  tb:text-bottom
+);
+
+$alignment-horz-map: (
+  l:left,
+  c:center,
+  r:right,
+  j:justify
+);
+
+$positioning-map: (
+  s:static,
+  r:relative,
+  a:absolute,
+  f:fixed
+);
+
+
+
+$gap:map-get($sizes-map,'m');
+
+
+
+:root {
+  --color-main:#{$color-main};
+  --color-main-dark:#{$color-main-dark};
+  --color-body-text:#{$color-body-text};
+
+  --color-gray-dark:#4a4a56;
+  --color-gray-light:#e4e4ea;
+  --color-white:#f7f7ff;
+
+  --header-height:#{$header-height};
+}
+
+
